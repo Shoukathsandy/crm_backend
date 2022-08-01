@@ -14,7 +14,7 @@ const MONGO_URL = process.env.MONGO_URL;
 async function CreateConnection (){
     const client = new MongoClient(MONGO_URL);
     await client.connect();
-    console.log("mongodb is connected")
+    console.log("mongodb is connected");
     return client;
 };
 export const client = await CreateConnection();
